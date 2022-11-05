@@ -3,5 +3,26 @@
     "express": "github:types/express",
     "mongoose": "^6.7.1",
     "typescript-rest": "^3.0.4"
-  }
+  },
+  "name": "typescript_api_endpoints",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon dist/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"Typescript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch -ts\" \"yarn run watch-node\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callumgordon90/Typescript_API_Endpoints.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/callumgordon90/Typescript_API_Endpoints/issues"
+  },
+  "homepage": "https://github.com/callumgordon90/Typescript_API_Endpoints#readme",
+  "description": ""
 }
