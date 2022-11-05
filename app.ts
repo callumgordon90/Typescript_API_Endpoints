@@ -1,7 +1,14 @@
 import * as express from "express";
+import { myDB } from "./db";
 import {Server, Path, GET, PathParam } from "typescript-rest";
 
 class Sample {
+
+    //I am not sure if this part is correct:
+    constructor() {
+        myDB.initDB();
+    }
+    //////
 
     @Path("/hello:name")
     @GET
