@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express": "github:types/express",
+    "mongoose": "^6.7.1",
+    "typescript-rest": "^3.0.4"
+  }
+}
