@@ -1,7 +1,7 @@
 import * as express from "express";
 import { myDB } from "./db";
 import Users, {UserModel } from "./models/userModel";
-import {Server, Path, GET, PathParam, POST } from "typescript-rest";
+import {Server, Path, GET, PathParam, POST, PUT } from "typescript-rest";
 
 class Sample {
 
@@ -32,6 +32,30 @@ class Sample {
             }
         }
 
+    //POST USER BY ID request
+    @PUT 
+        @Path('put/users/:id')
+        public async updateUser (@PathParam('id') id: ObjectId) {
+            try{
+                var users = await Users.findOneAndUpdate({ _id: id });
+                return users;
+            } catch(e) {
+                console.log(e);
+            }
+        }
+
+
+    ///GET USER BY ID REQUEST    
+    @GET
+        @Path('get/users/:id')
+            public async getUser(@PathParam('id') id: ObjectId){
+                try{
+                    var users = await Users.findOne({_id: id});
+                    return users;
+                } catch(e) {
+                    console.log(e);
+                }
+            }
 
 };
 
