@@ -1,5 +1,6 @@
 import * as express from "express";
 import { myDB } from "./db";
+import Users, {UserModel } from "./models/userModel";
 import {Server, Path, GET, PathParam } from "typescript-rest";
 
 class Sample {
